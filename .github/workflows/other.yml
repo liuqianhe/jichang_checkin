@@ -35,7 +35,8 @@ jobs:
           pip install -r requirements.txt
       - name: Run sign
         env:
-          URL: ${{ secrets.URL_OTHER }}
+          URL: ${{ secrets.URL }}
+          # 保持和main一致的url
           SCKEY: ${{ secrets.SCKEY_OTHER }}
           EMAIL: ${{ secrets.EMAIL_OTHER }}
           PASSWD: ${{ secrets.PASSWD_OTHER }}
